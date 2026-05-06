@@ -1,0 +1,69 @@
+:root {
+  --bg-primary: #080810;
+  --bg-secondary: #0e0e1c;
+  --bg-card: #12121f;
+  --bg-glass: rgba(18, 18, 31, 0.8);
+  --border: rgba(255, 255, 255, 0.06);
+  --border-hover: rgba(255, 255, 255, 0.12);
+  --accent-primary: #7c6af7;
+  --accent-secondary: #5eead4;
+  --accent-glow: rgba(124, 106, 247, 0.3);
+  --text-primary: #f0eeff;
+  --text-secondary: #8b8aac;
+  --text-muted: #4e4d68;
+  --success: #5eead4;
+  --error: #f87171;
+  --warning: #fbbf24;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Syne', sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-primary);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--text-muted);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-secondary);
+}
+
+/* Global transitions */
+*, *::before, *::after {
+  transition: border-color 0.2s ease, background-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Textarea & input reset */
+textarea, input, select {
+  font-family: 'Syne', sans-serif;
+  outline: none;
+}
+
+/* Selection */
+::selection {
+  background: var(--accent-primary);
+  color: #fff;
+}
